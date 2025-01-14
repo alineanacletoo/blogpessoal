@@ -11,7 +11,7 @@ export class PostagemController{
 
     @Get()
     @HttpCode(HttpStatus.OK)
-    findall(): Promise<Postagem[]>{
+    findAll(): Promise<Postagem[]>{
         return this.postagemService.findAll();
     }
 }
