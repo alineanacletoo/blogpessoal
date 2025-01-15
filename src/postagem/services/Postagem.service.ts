@@ -56,11 +56,14 @@ export class PostagemService{
         return await this.postagemRepository.save(postagem);
     }
 
-    async delete(id: number): Promise<DeleteResult>{
+   async delete(id: number): Promise<DeleteResult> {
+        
+        let buscaPostagem = await this.findById(id);
 
-        await this.findById(Postagem.id)
+        if (!buscaPostagem)
+            throw new HttpException('Postagem não encontrada!', HttpStatus.NOT_FOUND);
 
-         // DELETE tb_postagens WHERE id = ?;   
-        return await this.postagemRepository.delete(id)
+        return await this.postagemRepository.delete(id);
+
     }
 }
