@@ -10,9 +10,9 @@ async function bootstrap() {
     .setTitle('Blog Pessoal')
     .setDescription('Projeto Blog Pessoal')
     .setContact(
-      'Vinicius Rodrigues',
-      'https://github.com/Vinicius-Rodriguess',
-      'rodrigues.vini.2004@gmail.com',
+      'Aline Anacleto',
+      'https://github.com/alineanacletoo',
+      'alineanacleto07@gmail.com',
     )
     .setVersion('1.0')
     .addBearerAuth()
