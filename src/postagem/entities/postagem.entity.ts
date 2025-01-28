@@ -7,8 +7,10 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { Tema } from '../../tema/entities/tema.entity';
-import { Usuario } from './../../usuario/entities/usuario.entity';
+import { Tema } from '../../temas/entities/tema.entity';
+import { Usuario } from '../../usuario/entities/usuario.entity';
+
+
 
 @Entity({ name: 'tb_postagens' })
 export class Postagem {
