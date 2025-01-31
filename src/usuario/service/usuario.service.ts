@@ -34,7 +34,7 @@ export class UsuarioService {
     return usuario;
   }
 
-  async findByUsuario(usuario: string): Promise<Usuario | undefined> {
+  async findByUsuario(usuario: string): Promise<Usuario | null | undefined> {
     return await this.usuarioRepository.findOne({
       where: { usuario: usuario },
     });
